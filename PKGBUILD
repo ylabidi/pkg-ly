@@ -4,7 +4,7 @@
 
 pkgname=ly
 pkgver=0.6.0
-pkgrel=1
+pkgrel=1.1
 _tag=1c2be475ad09af18e632609c779d508e7fb866f9
 pkgdesc="TUI display manager"
 arch=(x86_64)
@@ -45,7 +45,6 @@ build() {
 package() {
     cd "$pkgname"
     # we install the binary as ly-dm because of the conflict with python-ly
-    make DESTDIR="$pkgdir" NAME=ly-dm install installsystemd
-    sed -i "s;/usr/bin/ly;/usr/bin/ly-dm;g" "$pkgdir/usr/lib/systemd/system/ly.service"
+    make DESTDIR="$pkgdir" NAME=ly-dm install
     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
 }

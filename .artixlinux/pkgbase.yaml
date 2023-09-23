@@ -1,13 +1,13 @@
 ---
 pkgbase:
   name: ly
-  version: 0.6.0-1
+  version: 0.6.0-1.1
   arch:
     - x86_64
   pkgname:
     - ly
 actions:
-  addRepo: galaxy
+  addRepo: world
   removeRepo: null
   triggersBuild: true
   triggersRebuild: false
@@ -31,8 +31,9 @@ repos:
     version: null
     packages: []
   world:
-    version: null
-    packages: []
+    version: 0.6.0-1.1
+    packages:
+      - ly-0.6.0-1.1-x86_64.pkg.tar.zst
   lib32-goblins:
     version: null
     packages: []
