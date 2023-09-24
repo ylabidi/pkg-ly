@@ -7,12 +7,12 @@ pkgbase:
   pkgname:
     - ly
 actions:
-  addRepo: world
-  removeRepo: null
-  triggersBuild: true
+  addRepo: null
+  removeRepo: galaxy
+  triggersBuild: false
   triggersRebuild: false
-  triggersRepoAdd: true
-  triggersRepoRemove: false
+  triggersRepoAdd: false
+  triggersRepoRemove: true
   triggersNoCheck: false
 repos:
   system-goblins:
@@ -50,6 +50,5 @@ repos:
     version: null
     packages: []
   galaxy:
-    version: 0.6.0-1
-    packages:
-      - ly-0.6.0-1-x86_64.pkg.tar.zst
+    version: null
+    packages: []
