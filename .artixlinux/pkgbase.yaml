@@ -7,12 +7,12 @@ pkgbase:
   pkgname:
     - ly
 actions:
-  addRepo: null
-  removeRepo: galaxy
-  triggersBuild: false
+  addRepo: world
+  removeRepo: null
+  triggersBuild: true
   triggersRebuild: false
-  triggersRepoAdd: false
-  triggersRepoRemove: true
+  triggersRepoAdd: true
+  triggersRepoRemove: false
   triggersNoCheck: false
 repos:
   system-goblins:
