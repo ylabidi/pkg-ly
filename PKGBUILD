@@ -14,13 +14,8 @@ makedepends=(git libxcb zig)
 optdepends=('xorg-xauth: for X server sessions'
             'libxcb: for X server sessions')
 backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
-source=("git+$url.git#tag=v${pkgver}")
-b2sums=('6735af4944bac5b259f2da064c8f0ca57df908e21315a16af846d28650c6372476b633ce2d5449aca29e7077728e0b40205bce9f47def5924f1755f60bf07025')
-
-prepare() {
-    cd "$pkgname"
-    git cherry-pick -n cbe7b37564f307fddfeba3732c68d5024d30f4f7
-}
+source=("https://github.com/fairyglade/ly/archive/refs/tags/v1.0.1.tar.gz")
+b2sums=('daf90c17ab467d71ba24f65ff42a36ca008c20a1b0706e158a580b1ee3c11bf0d93dacb3531359797d3c5cf2290daf792ef9c0621bbab8993b530536b2d08376')
 
 build() {
     cd "$pkgname"
