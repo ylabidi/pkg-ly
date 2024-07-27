@@ -18,12 +18,12 @@ source=("https://github.com/fairyglade/ly/archive/refs/tags/v1.0.1.tar.gz")
 b2sums=('daf90c17ab467d71ba24f65ff42a36ca008c20a1b0706e158a580b1ee3c11bf0d93dacb3531359797d3c5cf2290daf792ef9c0621bbab8993b530536b2d08376')
 
 build() {
-    cd "$pkgname"
+    cd "$pkgname-$pkgver"
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline
 }
 
 package() {
-    cd "$pkgname"
+    cd "$pkgname-$pkgver"
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline installsystemd
     # https://github.com/fairyglade/ly/issues/628
     chmod 644 "$pkgdir/etc/pam.d/ly" "$pkgdir/usr/lib/systemd/system/ly.service"
