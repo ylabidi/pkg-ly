@@ -15,7 +15,7 @@ optdepends=('xorg-xauth: for X server sessions'
             'libxcb: for X server sessions')
 backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
 source=("git+$url.git#tag=v${pkgver}")
-b2sums=('b44536c57e3464ffbb45d12cee54bad00b5eb31873fdd79c81222640ecab5df34b9a587232e5db760561f3f2d33af872456d3a3b92ef2a414b8dbf4fc6a70725')
+b2sums=('6735af4944bac5b259f2da064c8f0ca57df908e21315a16af846d28650c6372476b633ce2d5449aca29e7077728e0b40205bce9f47def5924f1755f60bf07025')
 
 prepare() {
     cd "$pkgname"
