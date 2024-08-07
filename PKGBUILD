@@ -17,6 +17,11 @@ backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
 source=("git+$url.git#tag=v${pkgver}")
 b2sums=('39738a0a00cddf2c986a33e78f28d6f241a1d4b342aca59a8e723fd005f079a34e5da19b3a870bfdb2739f4f7e1b04eace2f3187db310c92cdf71a6f89962035')
 
+prepare() {
+    cd "$pkgname"
+    git cherry-pick -n fadbbf676ad88e57cecffd501b5a4d4634064688
+}
+
 build() {
     cd "$pkgname"
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe
