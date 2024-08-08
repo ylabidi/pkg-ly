@@ -4,7 +4,7 @@
 
 pkgname=ly
 pkgver=1.0.2
-pkgrel=1
+pkgrel=1.1
 pkgdesc="TUI display manager"
 arch=(x86_64)
 url="https://github.com/fairyglade/ly"
@@ -29,7 +29,7 @@ build() {
 
 package() {
     cd "$pkgname"
-    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe
+    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
 
 
     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
