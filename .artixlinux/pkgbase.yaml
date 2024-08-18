@@ -1,7 +1,7 @@
 ---
 pkgbase:
   name: ly
-  version: 1.0.2-1.2
+  version: 1.0.2-1.3
   arch:
     - x86_64
   pkgname:
@@ -28,9 +28,9 @@ repos:
     version: null
     packages: []
   world-gremlins:
-    version: 1.0.2-1.2
+    version: 1.0.2-1.3
     packages:
-      - ly-1.0.2-1.2-x86_64.pkg.tar.zst
+      - ly-1.0.2-1.3-x86_64.pkg.tar.zst
   world:
     version: 1.0.2-1.1
     packages:
