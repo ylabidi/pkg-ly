@@ -4,14 +4,16 @@
 
 pkgname=ly
 pkgver=1.0.2
-pkgrel=1.1
+pkgrel=1.2
 pkgdesc="TUI display manager"
 arch=(x86_64)
 url="https://github.com/fairyglade/ly"
 license=('WTFPL')
 depends=(pam glibc)
 makedepends=(git libxcb zig)
-optdepends=('xorg-xauth: for X server sessions'
+optdepends=('brightnessctl: for controling brightness'
+            'xorg-xmessage: for displaying a message or query in a window'
+            'xorg-xauth: for X server sessions'
             'libxcb: for X server sessions')
 backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
 source=("git+$url.git#tag=v${pkgver}")
@@ -30,7 +32,7 @@ build() {
 package() {
     cd "$pkgname"
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
-
-
+    install -Dm644 res/config.ini "$pkgdir/etc/$_pkgname/config.ini"
     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
 }
+
