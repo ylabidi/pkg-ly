@@ -2,7 +2,7 @@
 
 pkgname=ly
 pkgver=1.0.2
-pkgrel=1.3
+pkgrel=1.4
 pkgdesc="TUI display manager"
 arch=(x86_64)
 url="https://github.com/fairyglade/$pkgname"
@@ -31,7 +31,7 @@ package() {
     cd "$pkgname"
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
     install -Dm644 res/config.ini "$pkgdir/etc/$pkgname/config.ini"
-    sed -i 's|$DEFAULT_TTY|7|' "$pkgdir"/etc/$pkgname/config.ini
+    sed -i 's|tty = 2|tty = 7|' "$pkgdir"/etc/$pkgname/config.ini
     sed -i 's|$CONFIG_DIRECTORY|/etc|' "$pkgdir"/etc/$pkgname/config.ini
     sed -i 's|$PREFIX_DIRECTORY|/usr|' "$pkgdir"/etc/$pkgname/config.ini
     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
