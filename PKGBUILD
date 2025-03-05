@@ -2,13 +2,13 @@
 
 pkgname=ly
 pkgver=1.0.2
-pkgrel=1.4
+pkgrel=2
 pkgdesc="TUI display manager"
 arch=(x86_64)
 url="https://github.com/fairyglade/$pkgname"
 license=('WTFPL')
-depends=(pam glibc)
-makedepends=(git libxcb zig)
+depends=(pam glibc libxcb)
+makedepends=(git zig)
 optdepends=('brightnessctl: for controling brightness'
             'xorg-xmessage: for displaying a message or query in a window'
             'xorg-xauth: for X server sessions'
