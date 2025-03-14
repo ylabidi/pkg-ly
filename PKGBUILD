@@ -1,8 +1,8 @@
 # Maintainer: artist for Artix Linux
 
 pkgname=ly
-pkgver=1.0.2
-pkgrel=2
+pkgver=1.0.3
+pkgrel=1
 pkgdesc="TUI display manager"
 arch=(x86_64)
 url="https://github.com/fairyglade/$pkgname"
@@ -15,7 +15,7 @@ optdepends=('brightnessctl: for controling brightness'
             'libxcb: for X server sessions')
 backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
 source=("git+$url.git#tag=v${pkgver}")
-b2sums=('39738a0a00cddf2c986a33e78f28d6f241a1d4b342aca59a8e723fd005f079a34e5da19b3a870bfdb2739f4f7e1b04eace2f3187db310c92cdf71a6f89962035')
+b2sums=('f5ac7d949487d70e0102b595f5d8b31615071f3edcc90e1d15285ad46843147bcda2510e4c946dbe123c326f3d1ed407d2ed4e7adac0370a7af2750a757c61f8')
 
 prepare() {
     cd "$pkgname"
