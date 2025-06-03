@@ -23,7 +23,7 @@ b2sums=('94eadef7552110288c3dfa0b564b6982f58f4ec6b46d7a9803acd2e102ca3d43367fb7c
 prepare() {
     cd "$pkgname"
     sed -i '/try install_service(allocator, patch_map);/d' build.zig
-    patch -Np1 -i $srcdir/config_ini.patch
+    patch -Np1 -i "$srcdir/config_ini.patch"
 }
 
 build() {
