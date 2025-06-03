@@ -15,9 +15,9 @@ optdepends=('brightnessctl: for controling brightness'
             'libxcb: for X server sessions')
 backup=(etc/$pkgname/{config.ini,setup.sh}
         etc/pam.d/ly)
-source=("$url/archive/v$pkgver.tar.gz"
+source=("$pkgname-v$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
         config_ini.patch)
-b2sums=('SKIP'
+b2sums=('94eadef7552110288c3dfa0b564b6982f58f4ec6b46d7a9803acd2e102ca3d43367fb7cf67e39bc56e0a571a99b52a02b7fa5cd63afcd8f7cd5c070d957f9456'
         '17c966e9bd9f578e1e9dc14d3ca212af388d87eba3fcc03315afb67818e57d9127f43c5e49e71f46b5ca1f25e19a84568152b76b573e64a3a9ce9e59e84d8662')
 
 prepare() {
