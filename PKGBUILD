@@ -8,7 +8,7 @@ arch=(x86_64)
 url="https://codeberg.org/AnErrupTion/ly"
 license=('WTFPL')
 depends=(pam glibc)
-makedepends=(libxcb zig)
+makedepends=(git libxcb zig)
 optdepends=('brightnessctl: for controling brightness'
             'xorg-xmessage: for displaying a message or query in a window'
             'xorg-xauth: for X server sessions'
