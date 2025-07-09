@@ -36,3 +36,4 @@ package() {
     zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Ddefault_tty=7 -Dcpu=baseline -Doptimize=ReleaseSafe installexe
     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
 }
+
