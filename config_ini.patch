@@ -1,11 +1,7 @@
---- a/res/config.ini	2025-08-04 00:00:18.000000000 +0200
-+++ b/res/config.ini	2025-08-06 13:50:59.436452906 +0200
-@@ -235,10 +235,10 @@
- 
- # Default path
- # If null, ly doesn't set a path
--path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+--- a/res/config.ini	2025-08-06 14:07:35.182697343 +0200
++++ b/res/config.ini	2025-08-06 14:07:15.694850289 +0200
+@@ -174,7 +174,7 @@
+ path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
  
  # Command executed when pressing restart_key
 -restart_cmd = /sbin/shutdown -r now
@@ -13,10 +9,10 @@
  
  # Specifies the key used for restart (F1-F12)
  restart_key = F2
-@@ -255,19 +255,19 @@
+@@ -190,19 +190,19 @@
+ # By default it's saved in the user's home directory
  # Important: due to technical limitations, X11 and shell sessions aren't supported, which
- # means you won't get any logs from those sessions.
- # If null, no session log will be created
+ # means you won't get any logs from those sessions
 -session_log = ly-session.log
 +session_log = .ly-session.log
  

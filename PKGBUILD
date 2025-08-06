@@ -18,7 +18,7 @@ backup=(etc/$pkgname/{config.ini,setup.sh}
 source=("git+$url.git#tag=v${pkgver}"
         config_ini.patch)
 b2sums=('20464d125d8528f82676839ed21ea2d9b8f688732a19755b245d08e6d1269f15e89ebd26bc895462d66e4a6562cee11ce604ec0fee70e13246619df69f5dffc7'
-        '629db62135900575cc5c61befd6e8be0dd8f80c617aea5b5c05e57f4241e5ea6dc9140c9cfb3e6d08a59ebe568aecca9a5225097ba4fecbe42474582458c1a03')
+        '7abef765e27adf9950538f6e70ba1b1970ea48196535a7507f148169ada1ad299ae334ca59cf0bc657bca4b1ccf22d005584b8af3ecfdf6b1a2b0f21db2051e1')
 
 prepare() {
     cd "$pkgname"
