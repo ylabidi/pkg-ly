@@ -1,7 +1,7 @@
 # Maintainer: artist for Artix Linux
 
 pkgname=ly
-pkgver=1.1.1
+pkgver=1.1.2
 pkgrel=1
 pkgdesc="Lightweight TUI (ncurses-like) display manager"
 arch=(x86_64)
@@ -17,7 +17,7 @@ backup=(etc/$pkgname/{config.ini,setup.sh}
         etc/pam.d/ly)
 source=("git+$url.git#tag=v${pkgver}"
         config_ini.patch)
-b2sums=('301f07f506ac1062b22823e048b0457c7990bdee894b250dd0bb17489b75e07ea274ea4fd0e6c450b59543bb6ce65e807398ea9d89b5463f44d19f66beee3727'
+b2sums=('20464d125d8528f82676839ed21ea2d9b8f688732a19755b245d08e6d1269f15e89ebd26bc895462d66e4a6562cee11ce604ec0fee70e13246619df69f5dffc7'
         '17c966e9bd9f578e1e9dc14d3ca212af388d87eba3fcc03315afb67818e57d9127f43c5e49e71f46b5ca1f25e19a84568152b76b573e64a3a9ce9e59e84d8662')
 
 prepare() {
