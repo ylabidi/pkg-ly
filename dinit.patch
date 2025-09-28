@@ -1,0 +1,15 @@
+diff --git a/res/ly-dinit b/res/ly-dinit
+index a20a71f..aae6f6b 100644
+--- a/res/ly-dinit
++++ b/res/ly-dinit
+@@ -1,8 +1,7 @@
+ type            = process
+ restart         = true
+ smooth-recovery = true
+-command         = $PREFIX_DIRECTORY/bin/$EXE_NAME
+-depends-on      = loginready
++command         = $PREFIX_DIRECTORY/bin/$EXECUTABLE_NAME
++depends-on      = logind
+ termsignal      = HUP
+-# ly needs access to the console while loginready already occupies it
+ options         = shares-console
